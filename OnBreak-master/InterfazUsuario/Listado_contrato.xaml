@@ -1,0 +1,31 @@
+﻿<mah:MetroWindow x:Class="InterfazUsuario.Listado_contrato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:InterfazUsuario"
+        mc:Ignorable="d"
+        Title="OnBreak Lista de Contratos" Height="500" Width="700">
+    <Grid>
+        <Label Content="Listado de contrato" HorizontalAlignment="Left" Margin="224,0,0,0" VerticalAlignment="Top" FontSize="26"/>
+        <Label Content="Numero contrato" HorizontalAlignment="Left" Margin="10,58,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Rut cliente" HorizontalAlignment="Left" Margin="192,58,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Tipo evento" HorizontalAlignment="Left" Margin="373,58,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <Label Content="Modalidad servicio" HorizontalAlignment="Left" Margin="478,58,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox MaxLength="12" Name="Filtro_numeroContrato_Txt" HorizontalAlignment="Left" Height="23" Margin="10,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <TextBox MaxLength="10" Name="Filtro_rutCliente_Txt" HorizontalAlignment="Left" Height="23" Margin="192,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" FontSize="14"/>
+        <ComboBox Name="Filtro_tipoEvento_comboBox" HorizontalAlignment="Left" Margin="336,92,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox Name="Filtro_ModalidadServicio_comboBox" HorizontalAlignment="Left" Margin="485,92,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid Name="Tabla_dataGrid" HorizontalAlignment="Left" Height="191" Margin="10,190,0,0" VerticalAlignment="Top" Width="595" IsReadOnly="True" MouseDoubleClick="Tabla_dataGrid_MouseDoubleClick"/>
+        <Button Content="Cancelar" HorizontalAlignment="Left" Margin="530,432,0,0" VerticalAlignment="Top" Width="75" Click="Cancelar_Click" Foreground="White" Background="#FF1591C9"/>
+        <Button Content="Filtrar" HorizontalAlignment="Left" Margin="10,123,0,0" VerticalAlignment="Top" Width="75" Click="Filtrar_Click" Foreground="White" Background="#FF1591C9"/>
+        <Button Content="QuitarFiltro" HorizontalAlignment="Left" Margin="90,123,0,0" VerticalAlignment="Top" Width="87" Click="QuitarFiltro_Click" Background="#FF1591C9" Foreground="White"/>
+        <Button Name="Btn_Aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="424,432,0,0" VerticalAlignment="Top" Width="75" Click="Aceptar_Click" Background="#FF1591C9" Foreground="White"/>
+        <Rectangle Fill="#FF1591C9" HorizontalAlignment="Left" Height="469" Margin="652,0,0,0" Stroke="#FF1591C9" VerticalAlignment="Top" Width="15"/>
+        <Button x:Name="alto_contraste" HorizontalAlignment="Left" Height="44" Margin="600,1,0,0" VerticalAlignment="Top" Width="45" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.733,0.625" Click="alto_contraste_Click">
+            <Image HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="36" Source="Images/Alto_contraste.png" Stretch="Fill"/>
+        </Button>
+
+    </Grid>
+</mah:MetroWindow>

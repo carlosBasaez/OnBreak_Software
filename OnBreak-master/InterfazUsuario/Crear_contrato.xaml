@@ -1,0 +1,78 @@
+﻿<Window x:Class="InterfazUsuario.Crear_contrato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfazUsuario"
+        mc:Ignorable="d"
+        Title="OnBreak Creacion de Contrato" Height="800" Width="720">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="771" Margin="0,-2,0,0" VerticalAlignment="Top" Width="692" Visibility="Visible">
+            <Label Content="Creacion de Contrato" HorizontalAlignment="Left" Margin="218,10,0,0" VerticalAlignment="Top" FontSize="26"/>
+            <Button Content="cancelar" HorizontalAlignment="Left" Margin="357,736,0,0" VerticalAlignment="Top" Width="86" Height="25" Click="Button_Click" Background="#FF1591C9"/>
+            <Label Content="Rut cliente" HorizontalAlignment="Left" Margin="10,98,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="txt_rut_cliente" HorizontalAlignment="Left" Height="31" Margin="146,98,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" FontSize="14" MaxLength="10"/>
+            <Label Content="Fecha de inicio" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <DatePicker Name="fechaInicio_datetime" HorizontalAlignment="Left" Margin="146,159,0,0" VerticalAlignment="Top" Width="150"/>
+            <Label Content="Hora de inicio" HorizontalAlignment="Left" Margin="335,154,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox  Name="hora_inicio" HorizontalAlignment="Left" Height="31" Margin="475,154,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="142" FontSize="14" TextChanged="Hora_inicio_TextChanged"/>
+            <Label Content="Fecha de termino" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Hora de termino" HorizontalAlignment="Left" Margin="335,226,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <DatePicker Name="fechaTermino_datetime" HorizontalAlignment="Left" Margin="146,226,0,0" VerticalAlignment="Top" Width="150"/>
+            <TextBox Name="hora_termino" HorizontalAlignment="Left" Height="31" Margin="475,226,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="142" FontSize="14" TextChanged="Hora_termino_TextChanged"/>
+            <Label Content="Asistentes" HorizontalAlignment="Left" Margin="14,287,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="asistente_txt" HorizontalAlignment="Left" Height="23" Margin="146,287,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="150" FontSize="14" TextChanged="Asistente_txt_TextChanged"/>
+            <Label Content="Personal adicional" HorizontalAlignment="Left" Margin="335,287,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="personal_add_text" HorizontalAlignment="Left" Height="31" Margin="477,287,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="142" FontSize="14" TextChanged="Personal_add_text_TextChanged"/>
+
+            <Label Content="Valor total" HorizontalAlignment="Left" Margin="14,672,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="ValorFinalTexto" HorizontalAlignment="Left" Height="32" Margin="116,671,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="150" FontSize="14" IsReadOnly="True"/>
+            <Label Content="Observaciones" HorizontalAlignment="Left" Margin="10,323,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="Observaciones_txt" HorizontalAlignment="Left" Height="59" Margin="14,359,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="605" FontSize="14" MaxLength="250"/>
+            <Label Content="Modalidad" HorizontalAlignment="Left" Margin="14,423,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <ComboBox Name="cbo_modalidad" HorizontalAlignment="Left" Margin="146,423,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="cbo_modalidad_SelectionChanged"/>
+            <Button Content="Aceptar" HorizontalAlignment="Left" Margin="207,736,0,0" VerticalAlignment="Top" Width="89" Height="25" Click="Button_Click_1" Background="#FF1591C9"/>
+            <Rectangle Fill="#FF1591C9" HorizontalAlignment="Left" Height="771" Margin="680,0,0,0" Stroke="#FF1591C9" VerticalAlignment="Top" Width="12"/>
+            <Button x:Name="alto_contraste" HorizontalAlignment="Left" Height="44" Margin="630,10,0,0" VerticalAlignment="Top" Width="45" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.733,0.625" Click="alto_contraste_Click">
+                <Image HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="36" Source="Images/Alto_contraste.png" Stretch="Fill"/>
+            </Button>
+            <Button Content="" HorizontalAlignment="Left" Margin="301,98,0,0" VerticalAlignment="Top" Width="31" Height="31" Click="Button_Click_2">
+                <Button.Background>
+                    <ImageBrush ImageSource="Images/Buscar_usuario.png"/>
+                </Button.Background>
+            </Button>
+            <Button Content="Respaldar" HorizontalAlignment="Left" Margin="508,736,0,0" VerticalAlignment="Top" Width="86" Height="25" Click="Respaldar_Click" Background="#FF1591C9"/>
+
+        </Grid>
+        <Grid Name="grd_coffee_break" HorizontalAlignment="Left" Height="177" Margin="0,466,0,0" VerticalAlignment="Top" Width="692" Visibility="Collapsed">
+            <Label Content="Opcion vegetariana" HorizontalAlignment="Left" Margin="10,21,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <CheckBox Name="CheckVegetariana" Content="Si" HorizontalAlignment="Left" Margin="184,26,0,0" VerticalAlignment="Top" FontSize="16"/>
+        </Grid>
+        <Grid Name="grd_cocktail" HorizontalAlignment="Left" Height="177" Margin="0,466,0,0" VerticalAlignment="Top" Width="692" Visibility="Collapsed">
+            <Label Content="Tipo ambientacion" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <ComboBox Name="cbo_tipo_ambientacion" SelectionChanged="cbo_tipo_ambientacion_changed" HorizontalAlignment="Left" Margin="170,36,0,0" VerticalAlignment="Top" Width="148"/>
+            <Label FontSize="16" Content="Musica Ambiental" HorizontalAlignment="Left" Margin="10,88,0,0" VerticalAlignment="Top"/>
+            <CheckBox Name="check_musicaAmbiental" IsChecked="False" HorizontalAlignment="Left" Margin="170,88,0,0" VerticalAlignment="Top" Width="34" Height="31" Checked="Check_musicaAmbiental_Checked_2" />
+            <Label FontSize="16" Content="Musica Cliente" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top"/>
+            <CheckBox Name="check_musicaCliente" HorizontalAlignment="Left" Margin="170,136,0,0" VerticalAlignment="Top" Width="34" Height="31"/>
+        </Grid>
+        <Grid Name="grd_cena" HorizontalAlignment="Left" Height="191" Margin="0,466,0,0" VerticalAlignment="Top" Width="692" Visibility="Collapsed">
+            <Label Content="Tipo ambientacion" HorizontalAlignment="Left" Margin="17,14,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <ComboBox Name="cbo_tipo_ambientacion_cena" SelectionChanged="cbo_tipo_ambientacion_changed" HorizontalAlignment="Left" Margin="170,15,0,0" VerticalAlignment="Top" Width="134"/>
+            <Label Content="Musica ambiental" HorizontalAlignment="Left" Margin="24,62,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <CheckBox Name="check_musicaAmbiental_cena" FontSize="16" Content="Si" HorizontalAlignment="Left" Margin="170,67,0,0" VerticalAlignment="Top" Checked="CheckBox_Checked"/>
+            <Label Content="Tipo local" HorizontalAlignment="Left" Margin="392,10,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Valor" HorizontalAlignment="Left" Margin="392,71,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="Valor_txt_local_cena" Text="0" TextChanged="ValorLocal_TextChanged"  MaxLength="12" HorizontalAlignment="Left" Height="23" Margin="470,76,0,0" TextWrapping="Wrap" FontSize="14" VerticalAlignment="Top" Width="190"/>
+            <Label Content="(En caso de que el local sea del propietario no se coloca valor)" HorizontalAlignment="Left" Margin="344,102,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cbo_tipo_local" HorizontalAlignment="Left" Height="26" Margin="488,10,0,0" VerticalAlignment="Top" Width="172" SelectionChanged="Cbo_tipo_local_SelectionChanged">
+                <ComboBoxItem>Local OnBreak</ComboBoxItem>
+                <ComboBoxItem>Otro local Onbreak</ComboBoxItem>
+                <ComboBoxItem>Local Externo</ComboBoxItem>
+            </ComboBox>
+
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="79" Margin="0,-2,0,0" VerticalAlignment="Top" Width="92" Stretch="Fill" Source="Images/onbreak.jpg"/>
+
+    </Grid>
+</Window>

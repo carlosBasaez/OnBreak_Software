@@ -1,0 +1,100 @@
+﻿<Window x:Class="InterfazUsuario.Administracion_cliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfazUsuario"
+        mc:Ignorable="d"
+        Title="OnBreak Administracion Cliente" Height="550" Width="740">
+    <Grid>
+        <Grid Name="grd_menu" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="692" Visibility="Visible">
+            <Button x:Name="borrar_usuario"  HorizontalAlignment="Left" Height="170" Margin="384,79,0,0" VerticalAlignment="Top" Width="236" Click="borrar_usuario_Click" FontSize="25" Background="#FF1591C9" ToolTip="Permite borrar usuarios del sistema">
+                <Image HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="110" Stretch="Fill" Source="Images/Borrar_Usuario.png"/>
+            </Button>
+            <Button x:Name="reg_usuario" HorizontalAlignment="Left" Height="170" Margin="125,79,0,0" VerticalAlignment="Top" Width="236" Click="reg_usuario_Click" FontSize="25" Background="#FF1591C9" ToolTip="Registrar un usuario al sistema">
+                <Image HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="109" Stretch="Fill" Source="Images/Registrar_Usuario.png"/>
+            </Button>
+            <Button x:Name="mantencion_usu" HorizontalAlignment="Left" Height="165" Margin="125,282,0,0" VerticalAlignment="Top" Width="231" Click="mantencion_usu_Click" FontSize="25" Background="#FF1591C9" ToolTip="Permite la actualizacion del sistema">
+                <Image HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="109" Stretch="Fill" Source="Images/Mantencion_de_usuario.png"/>
+            </Button>
+            <Button x:Name="busc_usuario" HorizontalAlignment="Left" Height="165" Margin="384,282,0,0" VerticalAlignment="Top" Width="236" Click="busc_usuario_Click" FontSize="25" Background="#FF1591C9" ToolTip="Busca usuarios dentro del sistema">
+                <Image HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="110" Stretch="Fill" Source="Images/Buscar_usuario.png"/>
+            </Button>
+            <Button Content="Cancelar" HorizontalAlignment="Left" Height="38" Margin="519,471,0,0" VerticalAlignment="Top" Width="101" FontSize="16" Click="Button_Click_3" Background="#FF1591C9" Foreground="White"/>
+            <Label Content="Registrar usuario" HorizontalAlignment="Left" Margin="125,206,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" Width="236" FontSize="25" RenderTransformOrigin="0.771,0.628"/>
+            <Label Content="Borrar usuario" HorizontalAlignment="Left" Margin="384,206,0,0" VerticalAlignment="Top" Width="236" Background="{x:Null}" Foreground="White" FontSize="25"/>
+            <Label Content="Mantencion usuario" HorizontalAlignment="Left" Margin="125,404,0,0" VerticalAlignment="Top" Width="231" Background="{x:Null}" Foreground="White" FontSize="25"/>
+            <Label Content="Buscar usuario" HorizontalAlignment="Left" Margin="384,404,0,0" VerticalAlignment="Top" Width="236" Background="{x:Null}" Foreground="White" FontSize="25"/>
+            <Image HorizontalAlignment="Left" Height="105" VerticalAlignment="Top" Width="120" Stretch="Fill" Source="Images/onbreak.jpg"/>
+            <Button x:Name="alto_contraste" HorizontalAlignment="Left" Height="44" Margin="642,6,0,0" VerticalAlignment="Top" Width="45" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.733,0.625" Click="alto_contraste_Click">
+                <Image HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="36" Source="Images/Alto_contraste.png" Stretch="Fill"/>
+            </Button>
+
+        </Grid>
+        <Grid Name="grd_reg_usuario" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="692" Visibility="Collapsed">
+            <Button Name="cancelar_grd_reg" Content="Cancelar" HorizontalAlignment="Left" Height="39" Margin="400,457,0,0" VerticalAlignment="Top" Width="134" Click="cancelar_grd_reg_Click_1" Foreground="White" Background="#FF1591C9"/>
+            <TextBox MaxLength="10" Name="rut_txt" HorizontalAlignment="Left" Height="29" Margin="164,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="195" FontSize="14"/>
+            <Label Content="Rut cliente" HorizontalAlignment="Left" Height="29" Margin="10,125,0,0" VerticalAlignment="Top" Width="113" FontSize="16"/>
+            <Label Content="Razon social" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox  Name="razon_txt" HorizontalAlignment="Left" Height="29" Margin="165,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontSize="14"/>
+            <Label Content="Nombre contacto" HorizontalAlignment="Left" Margin="10,226,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="nombre_txt" HorizontalAlignment="Left" Height="29" Margin="165,226,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontSize="14"/>
+            <Label Content="Mail contacto" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="mail_txt" HorizontalAlignment="Left" Height="28" Margin="165,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontSize="14"/>
+            <Label Content="Direccion" HorizontalAlignment="Left" Margin="10,346,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.526,0.823"/>
+            <TextBox Name="direccion_txt" HorizontalAlignment="Left" Height="29" Margin="165,346,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontSize="14"/>
+            <Label Content="Telefono" HorizontalAlignment="Left" Margin="10,400,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox MaxLength="12" Name="telefono_txt" HorizontalAlignment="Left" Height="29" Margin="165,400,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="194" FontSize="14"/>
+            <Button x:Name="Aceptar_usuario" Content="Aceptar" HorizontalAlignment="Left" Height="39" Margin="192,457,0,0" VerticalAlignment="Top" Width="134" Click="Aceptar_usuario_Click" Background="#FF1591C9" Foreground="White"/>
+            <Label Content="Tipo empresa" HorizontalAlignment="Left" Margin="379,123,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Actividad empresa" HorizontalAlignment="Left" Margin="379,172,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <ComboBox Name="cbo_tipo_empresa" HorizontalAlignment="Left" Height="31" Margin="524,122,0,0" VerticalAlignment="Top" Width="152"/>
+            <ComboBox Name="cbo_act" HorizontalAlignment="Left" Height="31" Margin="524,170,0,0" VerticalAlignment="Top" Width="152"/>
+            <Label Content="Registrar usuario" HorizontalAlignment="Left" Height="42" Margin="223,10,0,0" VerticalAlignment="Top" Width="262" FontSize="22"/>
+            <Image HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="116" Stretch="Fill" Source="Images/onbreak.jpg"/>
+        </Grid>
+        <Grid Name="grd_mantencion" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="692" Visibility="Collapsed">
+            <Button Name="cancelar_grd_mant" Content="Cancelar" HorizontalAlignment="Left" Height="45" Margin="374,450,0,0" VerticalAlignment="Top" Width="148" Click="cancelar_grd_mant_Click" Background="#FF1591C9" Foreground="White"/>
+            <Label Content="Actualizar datos usuario" HorizontalAlignment="Left" Height="46" Margin="201,10,0,0" VerticalAlignment="Top" Width="300" FontSize="22"/>
+            <Label Content="Nombre contacto" HorizontalAlignment="Left" Margin="29,176,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Mail de contacto" HorizontalAlignment="Left" Margin="29,244,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Telefono" HorizontalAlignment="Left" Margin="29,374,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="direccion" HorizontalAlignment="Left" Margin="29,307,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Tipo empresa" HorizontalAlignment="Left" Margin="382,244,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="Actividad empresa" HorizontalAlignment="Left" Margin="382,180,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="nombre_actualizar_txt" HorizontalAlignment="Left" Height="31" Margin="186,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="14"/>
+            <TextBox Name="mail_actualizar_txt" HorizontalAlignment="Left" Height="31" Margin="186,244,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="14"/>
+            <TextBox Name="direccion_actualizar_txt" HorizontalAlignment="Left" Height="32" Margin="186,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="14"/>
+            <TextBox MaxLength="12" Name="telefono_actualizar_txt" HorizontalAlignment="Left" Height="31" Margin="186,374,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="14"/>
+            <ComboBox Name="cbo_tipo_empresa_act" HorizontalAlignment="Left" Margin="524,243,0,0" VerticalAlignment="Top" Width="154" Height="31"/>
+            <ComboBox Name="cbo_act_act" HorizontalAlignment="Left" Margin="527,180,0,0" VerticalAlignment="Top" Width="151" Height="31"/>
+            <Button Content="Aceptar" HorizontalAlignment="Left" Height="40" Margin="172,450,0,0" VerticalAlignment="Top" Width="148" Click="Button_Click_4" Foreground="#FFFBFBFB" Background="#FF1591C9"/>
+            <Label Content="Ingresar Rut cliente" HorizontalAlignment="Left" Margin="29,101,0,0" VerticalAlignment="Top" FontSize="16" Width="157"/>
+            <TextBox Name="rut_act_txt" HorizontalAlignment="Left" Height="31" Margin="186,101,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="191" FontSize="14" MaxLength="10"/>
+            <Button Content="Abrir listado" HorizontalAlignment="Left" Margin="386,101,0,0" VerticalAlignment="Top" Width="136" Height="34" Click="BuscarEnListaCliente_Click" Foreground="White" Background="#FF1591C9"/>
+            <Label Content="Razon social" HorizontalAlignment="Left" Margin="386,307,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="RazonSocial_Actualizar_Txt" HorizontalAlignment="Left" Height="32" Margin="524,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="154" FontSize="14"/>
+            <Image HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="116" Stretch="Fill" Source="Images/onbreak.jpg"/>
+
+        </Grid>
+        <Grid Name="grd_borrar_usuario" HorizontalAlignment="Left" Height="519" VerticalAlignment="Top" Width="692" Visibility="Collapsed">
+            <Button Name="cancelar_grd_borrar" Content="Cancelar" HorizontalAlignment="Left" Height="46" Margin="366,413,0,0" VerticalAlignment="Top" Width="142" Click="cancelar_grd_borrar_Click" Background="#FF1591C9" Foreground="White"/>
+            <Button Content="Aceptar" HorizontalAlignment="Left" Margin="174,413,0,0" VerticalAlignment="Top" Width="142" Height="46" Click="Button_Click_1" Foreground="White" Background="#FF1591C9"/>
+            <Label Content="Borrar usuario" HorizontalAlignment="Left" Margin="269,36,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Ingrese rut del cliente" HorizontalAlignment="Left" Margin="253,146,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="rut_borrar_txt" HorizontalAlignment="Left" Height="36" Margin="201,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="280" FontSize="16" MaxLength="10"/>
+            <Button Content="Abrir listado" HorizontalAlignment="Left" Margin="495,206,0,0" VerticalAlignment="Top" Width="136" Height="34" Click="BuscarEnListaCliente_Click" Background="#FF1591C9" Foreground="White"/>
+            <Image HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="116" Stretch="Fill" Source="Images/onbreak.jpg"/>
+        </Grid>
+        <Grid Name="grd_buscar_usuario" HorizontalAlignment="Left" Height="523" Margin="-1,-4,0,0" VerticalAlignment="Top" Width="693" Visibility="Collapsed">
+            <Button x:Name="cancelar_grd_buscar" Content="Cancelar" HorizontalAlignment="Left" Height="34" Margin="390,352,0,0" VerticalAlignment="Top" Width="136" Click="cancelar_grd_buscar_Click" Foreground="White" Background="#FF1591C9"/>
+            <Label Content="Buscar usuario" HorizontalAlignment="Left" Margin="267,10,0,0" VerticalAlignment="Top" FontSize="26"/>
+            <Button Content="Aceptar" HorizontalAlignment="Left" Height="34" Margin="216,352,0,0" VerticalAlignment="Top" Width="136" Name="aceptar_buscar" Background="#FF1591C9" Foreground="White" Click="aceptar_buscar_Click"/>
+            <Button Content="Abrir listado" HorizontalAlignment="Left" Margin="506,206,0,0" VerticalAlignment="Top" Width="136" Height="34" Click="BuscarEnListaCliente_Click" Foreground="White" Background="#FF1591C9"/>
+            <Image HorizontalAlignment="Left" Height="90" VerticalAlignment="Top" Width="116" Stretch="Fill" Source="Images/onbreak.jpg"/>
+            <Label Content="Ingrese rut del cliente" HorizontalAlignment="Left" Margin="280,117,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBox Name="search_rut" HorizontalAlignment="Left" Height="34" Margin="216,206,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="268" FontSize="14" MaxLength="10"/>
+        </Grid>
+        <Rectangle Fill="#FF1591C9" HorizontalAlignment="Left" Height="519" Margin="697,0,0,0" Stroke="#FF1591C9" VerticalAlignment="Top" Width="15"/>
+    </Grid>
+</Window>

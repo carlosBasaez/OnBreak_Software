@@ -1,0 +1,42 @@
+﻿<Window x:Class="InterfazUsuario.Administracion_contrato"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InterfazUsuario"
+        mc:Ignorable="d"
+        Title=" onbreak Administracion contrato" Height="450" Width="700">
+    <Grid>
+        <Rectangle Fill="#FF1591C9" HorizontalAlignment="Left" Height="419" Margin="655,0,0,0" Stroke="#FF1591C9" VerticalAlignment="Top" Width="12"/>
+        <Grid Name="grd_menu_contrato" HorizontalAlignment="Left" Height="419" Margin="-1,0,0,0" VerticalAlignment="Top" Width="651" Visibility="Visible">
+            <Button HorizontalAlignment="Left" Height="154" Margin="124,93,0,0" VerticalAlignment="Top" Width="174" Background="#FF1591C9" Click="Button_Click">
+                <Image Height="78" Width="90" Stretch="Fill" Source="Images/Crear_contrato.png"/>
+            </Button>
+            <Label Content="Registro contrato" HorizontalAlignment="Left" Margin="124,216,0,0" VerticalAlignment="Top" Foreground="White" Width="174" FontSize="16"/>
+            <Button HorizontalAlignment="Left" Height="154" Margin="376,93,0,0" VerticalAlignment="Top" Width="174" Background="#FF1591C9" Click="Button_Click_3">
+                <Image Height="76" Width="78" Stretch="Fill" Source="Images/Mantencion_contrato.png"/>
+            </Button>
+            <Image Stretch="Fill" Source="Images/Crear_contrato.png" Margin="0,0,602,341"/>
+            <Button Content="Cancelar" HorizontalAlignment="Left" Margin="496,376,0,0" VerticalAlignment="Top" Width="110" Background="#FF1591C9" Foreground="White" Height="33" Click="Button_Click_1"/>
+            <Label Content="Mantencion contrato" HorizontalAlignment="Left" Margin="376,216,0,0" VerticalAlignment="Top" FontSize="16" Foreground="White"/>
+            <Image HorizontalAlignment="Left" Height="104" VerticalAlignment="Top" Width="110" Stretch="Fill" Source="Images/onbreak.jpg"/>
+        </Grid>
+        <Grid>
+            <Grid Name="grd_mantencion_contrato" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="651" Visibility="Collapsed">
+                <Label FontSize="22" Content="Mantencion contrato" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top"/>
+                <TextBox Name="nro_contrato" FontSize="14" HorizontalAlignment="Left" Height="22" Margin="172,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="300"/>
+                <Label FontSize="16" Content="Ingrese numero de contrato" HorizontalAlignment="Left" Margin="213,136,0,0" VerticalAlignment="Top"/>
+                <Button Content="Abrir listado" HorizontalAlignment="Left" Height="20" Margin="477,180,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click_5"/>
+                <Button Content="Buscar" HorizontalAlignment="Left" Margin="213,292,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_4"/>
+                <Button Content="Cancelar" HorizontalAlignment="Left" Margin="359,292,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+                <Image HorizontalAlignment="Left" Height="104" VerticalAlignment="Top" Width="110" Stretch="Fill" Source="Images/onbreak.jpg"/>
+
+            </Grid>
+            <Button x:Name="alto_contraste" HorizontalAlignment="Left" Height="44" Margin="606,0,0,0" VerticalAlignment="Top" Width="45" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}" RenderTransformOrigin="0.733,0.625" Click="alto_contraste_Click">
+                <Image HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="36" Source="Images/Alto_contraste.png" Stretch="Fill"/>
+            </Button>
+
+        </Grid>
+
+    </Grid>
+</Window>
